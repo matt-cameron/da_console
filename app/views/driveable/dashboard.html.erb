@@ -33,8 +33,8 @@
                     <div class="text-center m">
                     </div>
                     <% if ec2.public_dns_name == nil %>
-                    <small class="block text-muted"><i class="fa fa-cloud"></i> <%= ec2.public_dns_name %></small>
                     <% else %>
+                    <small class="block text-muted"><i class="fa fa-cloud"></i> <%= ec2.public_dns_name %></small>
                     <% end %>
                 </li>
               <% end  %>
