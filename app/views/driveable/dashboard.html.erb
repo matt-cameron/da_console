@@ -27,31 +27,14 @@
         </div>
         <div class="ibox-content no-padding">
             <ul class="list-group">
-
+              <% @ec2.instances.each do |ec2|  %>
                 <li class="list-group-item">
-                    <p><a class="text-info" href="#">i-064b930fcd43a21c0</a><br>Availability zone: us-east-1d </p>
+                    <p><a class="text-info" href="#"><td><%= ec2.id %></td></a><br>Availability zone: us-east-1d </p>
                     <div class="text-center m">
                     </div>
-                    <small class="block text-muted"><i class="fa fa-cloud"></i> ec2-52-86-133-208.compute-1.amazonaws.com</small>
+                    <small class="block text-muted"><i class="fa fa-cloud"></i> <%= ec2.public_dns_name %></small>
                 </li>
-                <li class="list-group-item">
-                    <p><a class="text-info" href="#">i-0ca092b7783efa38e</a><br>Availability zone: us-east-1d </p>
-                    <div class="text-center m">
-                    </div>
-                    <small class="block text-muted"><i class="fa fa-cloud"></i> ec2-52-202-143-204.compute-1.amazonaws.com</small>
-                </li>
-                <li class="list-group-item">
-                    <p><a class="text-info" href="#">i-53705cce</a><br>Availability zone: us-east-1d </p>
-                    <div class="text-center m">
-                    </div>
-                    <small class="block text-muted"><i class="fa fa-cloud"></i> - -</small>
-                </li>
-                <li class="list-group-item">
-                    <p><a class="text-info" href="#">i-0b4a186a3f8fe41e4</a><br>Availability zone: us-east-1d </p>
-                    <div class="text-center m">
-                    </div>
-                    <small class="block text-muted"><i class="fa fa-cloud"></i> - -</small>
-                </li>
+              <% end  %>
             </ul>
         </div>
     </div>
