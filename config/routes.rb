@@ -5,7 +5,12 @@ Myapp::Application.routes.draw do
 
   # DriveABLE
   get "driveable/dashboard"
-
+  # Authentication
+  get '/register' => 'users#new'
+  post '/users' => 'users#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   # All routes
   get "dashboards/dashboard_1"
   get "dashboards/dashboard_2"
