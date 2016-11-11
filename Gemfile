@@ -6,7 +6,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'font-awesome-rails', '4.3.0.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.13', '< 0.5'
+# gem 'mysql2', '>= 0.3.13', '< 0.5'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.4'
