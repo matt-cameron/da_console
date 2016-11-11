@@ -17,6 +17,12 @@ body.full-height-layout #page-wrapper {
   height: 100%;
 }
 
+#login-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 #page-wrapper {
   min-height: auto;
 }
