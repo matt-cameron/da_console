@@ -1,6 +1,6 @@
 <div class="row  border-bottom white-bg dashboard-header">
-    <div class="col-sm-3 animated fadeInLeft">
-        <h2>Good Morning <%= current_user.fname %></h2>
+    <div class="col-sm-4 animated fadeInLeft">
+        <h2>Good Monring <%= current_user.fname %></h2>
         <small></small>
     </div>
 
@@ -33,8 +33,8 @@
                     <div class="text-center m">
                     </div>
                     <% if ec2.public_dns_name %>
-                    <% else %>
                     <small class="block text-muted"><i class="fa fa-cloud"></i> <%= ec2.public_dns_name %></small>
+                    <% else %>
                     <% end %>
                 </li>
               <% end  %>
