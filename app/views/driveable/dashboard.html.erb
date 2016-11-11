@@ -1,0 +1,279 @@
+<div class="row  border-bottom white-bg dashboard-header">
+    <div class="col-sm-3">
+        <h2>Good Evening Matt</h2>
+        <small></small>
+    </div>
+
+</div>
+<div class="row">
+<div class="col-lg-12">
+<div class="wrapper wrapper-content">
+<div class="row">
+    <div class="col-lg-4">
+
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Active EC2 Instances</h5>
+            <div class="ibox-tools">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-wrench"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li>
+                        <a href="#">Open in AWS Console</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ibox-content no-padding">
+            <ul class="list-group">
+
+                <li class="list-group-item">
+                    <p><a class="text-info" href="#">i-064b930fcd43a21c0</a><br>Availability zone: us-east-1d </p>
+                    <div class="text-center m">
+                    </div>
+                    <small class="block text-muted"><i class="fa fa-cloud"></i> ec2-52-86-133-208.compute-1.amazonaws.com</small>
+                </li>
+                <li class="list-group-item">
+                    <p><a class="text-info" href="#">i-0ca092b7783efa38e</a><br>Availability zone: us-east-1d </p>
+                    <div class="text-center m">
+                    </div>
+                    <small class="block text-muted"><i class="fa fa-cloud"></i> ec2-52-202-143-204.compute-1.amazonaws.com</small>
+                </li>
+                <li class="list-group-item">
+                    <p><a class="text-info" href="#">i-53705cce</a><br>Availability zone: us-east-1d </p>
+                    <div class="text-center m">
+                    </div>
+                    <small class="block text-muted"><i class="fa fa-cloud"></i> - -</small>
+                </li>
+                <li class="list-group-item">
+                    <p><a class="text-info" href="#">i-0b4a186a3f8fe41e4</a><br>Availability zone: us-east-1d </p>
+                    <div class="text-center m">
+                    </div>
+                    <small class="block text-muted"><i class="fa fa-cloud"></i> - -</small>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Compliance Alerts</h5>
+            <div class="ibox-tools">
+                <span class="label label-danger">2 Warnings</span>
+            </div>
+        </div>
+        <div class="ibox-content ibox-heading">
+            <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> There Are Currently Compliance Alarms</h3>
+            <small><i class="fa fa-cloud"></i> Sign into the <a href="#">AWS console for details.</a> </small>
+        </div>
+        <div class="ibox-content">
+
+            <div>
+                <div class="feed-activity-list">
+
+                    <div class="feed-element">
+                        <div class="media-body ">
+                            <small class="pull-right">FAILURE</small>
+                            <strong>s3-bucket-logging-enabled</strong> has been found non-compliant. <br>
+                            <small class="text-muted">Checks whether logging is enabled for your S3 buckets.</small>
+                        </div>
+                    </div>
+
+                    <div class="feed-element">
+                        <div class="media-body ">
+                            <small class="pull-right">FAILURE</small>
+                            <strong>iam-password-policy</strong> has been found non-compliant. <br>
+                            <small class="text-muted">Checks whether the account password policy for IAM users meets the specified requirements.</small>
+                        </div>
+                    </div>
+
+                    <div class="feed-element">
+                        <div class="media-body ">
+                            <small class="pull-right">PASS</small>
+                            <strong>rds-storage-encrypted</strong> has been found to be compliant. <br>
+                            <small class="text-muted">Checks whether storage encryption is enabled for your RDS DB instances.</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> Show More</button>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="col-lg-4">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>CloudWatch Events</h5>
+            <div class="ibox-tools">
+                <!-- <span class="label label-danger"> warning box </span> -->
+            </div>
+        </div>
+        <div class="ibox-content no-padding">
+            <ul class="list-group">
+
+                <li class="list-group-item">
+                    <p><b>Alarm:Production Frontend Status Check</b><br>State changed to INSUFFICIENT DATA at 2016/10/26. Reason: Insufficient Data: 5 datapoints were unknown. </p>
+                    <div class="text-center m">
+                    </div>
+                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
+                </li>
+                <li class="list-group-item">
+                    <p><b>Alarm:awsrds-hhproduction-CPU-Utilization</b><br>State changed to OK at 2016/10/26. Reason: Threshold Crossed: 1 datapoint (1.0) was not greater than or equal to the threshold (80.0).</p>
+                    <div class="text-center m">
+                    </div>
+                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 3 hours ago</small>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div>
+<!-- Footer -->
+<%= render 'layouts/footer' %>
+</div>
+        </div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+$(function() {
+
+    setTimeout(function() {
+        toastr.options = {
+            closeButton: true,
+            progressBar: true,
+            showMethod: 'slideDown',
+            timeOut: 4000
+        };
+        toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+
+    }, 1300);
+
+    $(".bar_dashboard").peity("bar", {
+        fill: ["#1ab394", "#d7d7d7"],
+        width: 100
+    })
+
+    $("#sparkline8").sparkline([5, 6, 7, 2, 0, 4, 2, 4, 5, 7, 2, 4, 12, 14, 4, 2, 14, 12, 7], {
+        type: 'bar',
+        barWidth: 8,
+        height: '150px',
+        barColor: '#1ab394',
+        negBarColor: '#c6c6c6'
+    });
+
+    var updatingChart = $(".updating-chart").peity("line", { fill: '#1ab394', stroke: '#169c81', width: 64 })
+
+    setInterval(function () {
+        var random = Math.round(Math.random() * 10)
+        var values = updatingChart.text().split(",")
+        values.shift()
+        values.push(random)
+
+        updatingChart
+                .text(values.join(","))
+                .change()
+    }, 1000);
+
+    var data1 = [
+        [0, 4], [1, 8], [2, 5], [3, 10], [4, 4], [5, 16], [6, 5], [7, 11], [8, 6], [9, 11], [10, 30], [11, 10], [12, 13], [13, 4], [14, 3], [15, 3], [16, 6]
+    ];
+    var data2 = [
+        [0, 1], [1, 0], [2, 2], [3, 0], [4, 1], [5, 3], [6, 1], [7, 5], [8, 2], [9, 3], [10, 2], [11, 1], [12, 0], [13, 2], [14, 8], [15, 0], [16, 0]
+    ];
+    $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
+        data1, data2
+    ],
+            {
+                series: {
+                    lines: {
+                        show: false,
+                        fill: true
+                    },
+                    splines: {
+                        show: true,
+                        tension: 0.4,
+                        lineWidth: 1,
+                        fill: 0.4
+                    },
+                    points: {
+                        radius: 0,
+                        show: true
+                    },
+                    shadowSize: 2
+                },
+                grid: {
+                    hoverable: true,
+                    clickable: true,
+                    tickColor: "#d5d5d5",
+                    borderWidth: 1,
+                    color: '#d5d5d5'
+                },
+                colors: ["#1ab394", "#1C84C6"],
+                xaxis: {
+                },
+                yaxis: {
+                    ticks: 4
+                },
+                tooltip: false
+            }
+    );
+
+    var doughnutData = {
+        labels: ["App","Software","Laptop" ],
+        datasets: [{
+            data: [300,50,100],
+            backgroundColor: ["#a3e1d4","#dedede","#9CC3DA"]
+        }]
+    } ;
+
+
+    var doughnutOptions = {
+        responsive: false,
+        legend: {
+            display: false
+        }
+    };
+
+
+    var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+    new Chart(ctx4, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
+
+    var doughnutData = {
+        labels: ["App","Software","Laptop" ],
+        datasets: [{
+            data: [70,27,85],
+            backgroundColor: ["#a3e1d4","#dedede","#9CC3DA"]
+        }]
+    } ;
+
+
+    var doughnutOptions = {
+        responsive: false,
+        legend: {
+            display: false
+        }
+    };
+
+
+    var ctx4 = document.getElementById("doughnutChart2").getContext("2d");
+    new Chart(ctx4, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
+
+});
+
+</script>
+
+<% end %>
