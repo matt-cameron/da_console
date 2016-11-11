@@ -1,15 +1,15 @@
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>Profile 2</h2>
+        <h2><%= current_user.fname %><%= current_user.lname %></h2>
         <ol class="breadcrumb">
             <li>
-                <a href="<%= url_for :controller => 'dashboards', :action => 'dashboard_1' %>">Home</a>
+                <a href="/">Home</a>
             </li>
             <li>
-                <a>App views</a>
+                <a href="/users">Console Users</a>
             </li>
             <li class="active">
-                <strong>Profile 2</strong>
+                <strong><%= current_user.fname %><%= current_user.lname %></strong>
             </li>
         </ol>
     </div>
@@ -31,12 +31,11 @@
             <div class="">
                 <div>
                     <h2 class="no-margins">
-                        Alex Smith
+                      <%= current_user.fname %><%= current_user.lname %>
                     </h2>
-                    <h4>Founder of Groupeq</h4>
+                    <h4>Software Engineer</h4>
                     <small>
-                        There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form Ipsum available.
+                        
                     </small>
                 </div>
             </div>
@@ -450,4 +449,3 @@ $(function() {
 </script>
 
 <% end %>
-
