@@ -1,6 +1,6 @@
 <div class="row  border-bottom white-bg dashboard-header">
     <div class="col-sm-3 animated fadeInLeft">
-        <h2>Good Evening <%= current_user.fname %></h2>
+        <h2>Good Morning <%= current_user.fname %></h2>
         <small></small>
     </div>
 
@@ -29,10 +29,10 @@
             <ul class="list-group">
               <% @ec2.instances.each do |ec2|  %>
                 <li class="list-group-item">
-                    <p><a class="text-info" href="#"><td><%= ec2.id %></td></a><br>Availability zone: us-east-1d </p>
+                    <p><a class="text-info" href="#"><td><%= ec2.id %></td></a><br><%= ec2.state.name %></p>
                     <div class="text-center m">
                     </div>
-                    <% if ec2.public_dns_name == nil %>
+                    <% if ec2.public_dns_name %>
                     <% else %>
                     <small class="block text-muted"><i class="fa fa-cloud"></i> <%= ec2.public_dns_name %></small>
                     <% end %>
