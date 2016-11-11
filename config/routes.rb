@@ -7,6 +7,7 @@ Myapp::Application.routes.draw do
   get "driveable/dashboard"
   # Authentication
   get '/register' => 'users#new'
+  get '/profile' => 'users#profile'
   post '/users' => 'users#create'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
